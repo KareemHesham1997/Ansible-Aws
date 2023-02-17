@@ -1,0 +1,11 @@
+- name: Install Nexus
+  hosts: private_ec2       
+  become: true                    
+  roles:
+    - roles/nexus
+
+- name: Install SonarQube
+  hosts: private_ec2       
+  become: true                    
+  roles:
+    - roles/sonarqube

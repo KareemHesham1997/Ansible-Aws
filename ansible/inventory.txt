@@ -1,0 +1,5 @@
+[bastion_machine]
+bastion ansible_host=54.224.240.3 ansible_user=ubuntu ansible_ssh_private_key_file=./karim1.pem
+[private_ec2]
+nexus ansible_host=10.0.1.227 ansible_user=ubuntu ansible_ssh_private_key_file=./karim1.pem ansible_ssh_common_args='-o ProxyCommand="ssh bastion -W %h:%p"'
+sonarqube ansible_host=10.0.2.193 ansible_user=ubuntu ansible_ssh_private_key_file=./karim1.pem ansible_ssh_common_args='-o ProxyCommand="ssh bastion -W %h:%p"'

@@ -1,0 +1,5 @@
+---
+# vars file for install
+sonarqube_version: 7.3
+
+
